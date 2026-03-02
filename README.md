@@ -5,6 +5,7 @@ The community-reviewed list of vendors selling genuine Bitaxe hardware.
 Listings are managed via pull requests — open, transparent, and on the record. The community discusses, the Bitaxe core team decides.
 
 → **Want to get listed?** Read [VENDOR_GUIDE.md](VENDOR_GUIDE.md) and open a PR.
+
 → **Want to report a vendor?** [Open an issue](../../issues/new/choose).
 
 ---
