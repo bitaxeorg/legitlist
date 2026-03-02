@@ -1,0 +1,21 @@
+{
+  "name": "legitlist",
+  "version": "1.0.0",
+  "description": "Vendor registry for the Bitaxe Find a Seller page",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-to-framer.mjs",
+    "validate": "node scripts/validate-all.mjs"
+  },
+  "dependencies": {
+    "framer-api": "latest"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
