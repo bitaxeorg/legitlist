@@ -15,7 +15,7 @@
     "ajv-formats": "^3.0.1"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "license": "MIT"
 }
