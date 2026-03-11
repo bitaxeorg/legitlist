@@ -25,7 +25,7 @@ New to the community? That's fine — but expect the review to take longer while
 
 ### 1. Fork this repo
 
-Hit **Fork** at the top right of this page.
+Go to **[bitaxeorg/legitlist on GitHub](https://github.com/bitaxeorg/legitlist)** and hit **Fork** at the top right.
 
 ### 2. Add your two files
 
