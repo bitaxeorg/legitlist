@@ -6,7 +6,7 @@
   "country": "USA",
   "logo": "logos/_example.png",
   "description": "Official Bitaxe reseller for the USA — ships within 2 business days.",
-  "active": false,
+  "active": true,
   "social": {
     "x": "https://x.com/examplevendor",
     "instagram": "https://instagram.com/examplevendor",

@@ -45,8 +45,8 @@
     },
     "description": {
       "type": "string",
-      "maxLength": 300,
-      "description": "Optional short description (max 300 chars)"
+      "maxLength": 280,
+      "description": "Optional short description (max 280 chars)"
     },
     "active": {
       "type": "boolean",

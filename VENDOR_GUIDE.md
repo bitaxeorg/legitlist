@@ -31,7 +31,7 @@ Go to **[bitaxeorg/legitlist on GitHub](https://github.com/bitaxeorg/legitlist)*
 
 **`vendors/{your-slug}.json`**
 
-The slug is your unique identifier — lowercase letters and hyphens only. Example: `pivotal-mining`.
+The slug is your unique identifier — lowercase letters, numbers, and hyphens only. Example: `pivotal-mining`.
 
 Copy `vendors/_example.json` and fill it in:
 
@@ -43,7 +43,7 @@ Copy `vendors/_example.json` and fill it in:
   "region": "North America",
   "country": "USA",
   "logo": "logos/your-shop-name.png",
-  "description": "One or two honest sentences about what you sell and who you serve.",
+  "description": "Tell miners who you are — what you sell, where you ship, how long you've been at it. Keep it under 280 characters.",
   "active": true,
   "social": {
     "x": "https://x.com/yourhandle",
@@ -53,11 +53,18 @@ Copy `vendors/_example.json` and fill it in:
 }
 ```
 
+A few notes:
+- **`description`** is optional but encouraged — it's what shows under your name on the site. Think of it as your one-tweet pitch to a miner deciding where to buy.
+- **`active`** — leave it as `true`. The team manages this field; it only gets changed if a listing is suspended.
+- **Social links** — include the full URL or leave the field as an empty string `""` to skip it.
+
 Valid regions: `North America` · `South America` · `Europe` · `Asia Pacific` · `Middle East & Africa`
 
 **`logos/{your-slug}.png`**
 
-Square format. PNG, JPG, or WEBP. Max **200 KB**.
+Square, **100×100px minimum**. PNG, JPG, WEBP, or SVG. Max **200 KB**.
+
+No logo yet? Submit your PR anyway — a placeholder will be shown until you add one.
 
 ### 3. Open a pull request
 
