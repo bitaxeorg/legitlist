@@ -1,0 +1,15 @@
+{
+  "name": "SkotShop",
+  "slug": "skotshop",
+  "website": "https://bitnet.cx",
+  "region": "North America",
+  "country": "USA",
+  "logo": "logos/skotshop.png",
+  "description": "The most awesome test shop that doesn't exist",
+  "active": true,
+  "social": {
+    "x": "https://x.com/skot9000",
+    "instagram": "",
+    "youtube": ""
+  }
+}
