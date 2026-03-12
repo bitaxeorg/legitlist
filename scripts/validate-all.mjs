@@ -44,20 +44,17 @@ for (const file of files) {
     continue
   }
 
-  // Logo must exist
+  // Logo — missing is a warning (placeholder used), oversized is an error
   const logoPath = path.resolve(data.logo)
   if (!fs.existsSync(logoPath)) {
-    console.error(`❌ ${file} — Logo not found: ${data.logo}`)
-    errors++
-    continue
-  }
-
-  // Logo must be ≤ 200 KB
-  const size = fs.statSync(logoPath).size
-  if (size > 204800) {
-    console.error(`❌ ${file} — Logo exceeds 200 KB (${size} bytes)`)
-    errors++
-    continue
+    console.warn(`⚠️  ${file} — Logo not found: ${data.logo} (placeholder will be used)`)
+  } else {
+    const size = fs.statSync(logoPath).size
+    if (size > 204800) {
+      console.error(`❌ ${file} — Logo exceeds 200 KB (${size} bytes)`)
+      errors++
+      continue
+    }
   }
 
   console.log(`✅ ${file}`)

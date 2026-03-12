@@ -50,7 +50,7 @@
     },
     "logo": {
       "type": "string",
-      "pattern": "^logos/[a-z0-9-]+\\.(png|jpg|jpeg|webp|svg)$",
+      "pattern": "^logos/[a-zA-Z0-9_-]+\\.(png|jpg|jpeg|webp|svg)$",
       "description": "Path to logo file relative to repo root (e.g. 'logos/pivotal-mining.png')"
     },
     "description": {

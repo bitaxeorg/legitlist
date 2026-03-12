@@ -55,7 +55,7 @@ Check `vendors/_example.json` for the template.
 
 Vendors are tagged by region so miners can find local sellers:
 
-`North America` · `South America` · `Europe` · `Asia Pacific` · `Middle East & Africa`
+`Europe` · `North America` · `South America` · `Asia Pacific` · `Middle East` · `Africa` · `India`
 
 ---
 
