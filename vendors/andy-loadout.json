@@ -1,0 +1,15 @@
+{
+  "name": "Andy Loadout",
+  "slug": "andy-loadout",
+  "website": "loadout.gg",
+  "region": "Europe",
+  "country": "Italy",
+  "logo": "logos/andy-loadout.png",
+  "description": "I am Andy and I'm testing Vendor's Bitaxe flow",
+  "active": true,
+  "social": {
+    "x": "https://x.com/aerdna_c",
+    "instagram": "",
+    "youtube": ""
+  }
+}
