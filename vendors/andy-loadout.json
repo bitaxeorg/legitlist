@@ -1,0 +1,15 @@
+{
+  "name": "Andy Loadout",
+  "slug": "andy-loadout",
+  "website": "https://loadout.gg",
+  "region": "Europe",
+  "country": "Italy",
+  "logo": "andy-loadout.png",
+  "description": "Andt x bitaxe x Loadout Vendor Test",
+  "active": true,
+  "social": {
+    "x": "https://x.com/aerdna_c",
+    "instagram": "",
+    "youtube": ""
+  }
+}
