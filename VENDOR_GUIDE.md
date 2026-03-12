@@ -23,22 +23,35 @@ New to the community? That's fine — but expect the review to take longer while
 
 ## 📋 How to submit
 
-### 1. Fork this repo
+You can do all of this directly in your browser on GitHub. No coding tools needed.
 
-Open this page directly:
+### 1. Create your copy of this repo
+
+Open this page:
 
 **https://github.com/bitaxeorg/legitlist/fork**
 
-Quick answers:
+Then click **Create fork**.
+
+Quick answer:
 - **Do I need to rename the fork?** No — keep the default name.
 
-### 2. Add your two files
+### 2. Create your shop file
 
-**`vendors/{your-slug}.json`**
+In your fork, open the `vendors` folder.
 
-The slug is your unique identifier — use letters, numbers, hyphens or underscores. Example: `pivotal-mining` or `pivotal_mining`.
+Then click:
+**Add file** → **Create new file**
 
-Copy `vendors/_example.json` and fill it in:
+Name your file like this:
+
+`your-shop-name.json`
+
+Example:
+
+`pivotal-mining.json`
+
+Now paste this template and replace the example values with your own:
 
 ```json
 {
@@ -59,23 +72,54 @@ Copy `vendors/_example.json` and fill it in:
 ```
 
 A few notes:
-- **`description`** is optional but encouraged — it's what shows under your name on the site. Think of it as your one-tweet pitch to a miner deciding where to buy.
-- **`active`** — leave it as `true`. The team manages this field; it only gets changed if a listing is suspended.
-- **Social links** — include the full URL or leave the field as an empty string `""` to skip it.
+- `description` is optional, but recommended
+- leave `active` as `true`
+- for social links, use the full URL or leave the field empty: `""`
 
-Valid regions: `Europe` · `North America` · `South America` · `Asia Pacific` · `Middle East` · `Africa` · `India`
+Valid regions:
+`Europe` · `North America` · `South America` · `Asia Pacific` · `Middle East` · `Africa` · `India`
 
-**`logos/{your-slug}.png`** (or .jpg / .webp)
+Then click **Commit changes**.
 
-Square, **400×400px recommended**. PNG, JPG, or WebP. Max **200 KB**.
+### 3. Upload your logo
 
-Logo is required for new listings.
+In your fork, open the `logos` folder.
 
-### 3. Open a pull request
+Then click:
+**Add file** → **Upload files**
 
-Title your PR: `Add vendor: Your Shop Name`
+Your logo must:
+- use the same name as your shop file
+- be square
+- be **400×400 px recommended**
+- be max **200 KB**
+- be `.png`, `.jpg`, or `.webp`
 
-Fill in the PR template. The more context you give, the faster the review.
+Example:
+- shop file: `vendors/pivotal-mining.json`
+- logo file: `logos/pivotal-mining.png`
+
+Then click **Commit changes**.
+
+### 4. Open your pull request
+
+Open your fork on GitHub and click:
+
+**Contribute** → **Open pull request**
+
+Use this title:
+
+`Add vendor: Your Shop Name`
+
+Then fill in the PR template and submit it.
+
+### 5. What happens next
+
+1. We check that your files are valid
+2. The community can review and comment
+3. The core team decides whether to merge your listing
+
+If your PR is closed, you can fix the issues and open a new one.
 
 ---
 
