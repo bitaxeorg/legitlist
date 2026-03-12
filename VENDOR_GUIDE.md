@@ -51,7 +51,9 @@ Example:
 
 `pivotal-mining.json`
 
-Now paste this template and replace the example values with your own:
+Choose one short name for your shop, like `pivotal-mining`. Use that same name for your JSON file, the `slug` field, and your logo file.
+
+Paste this example, then replace the sample details with your own shop details:
 
 ```json
 {
@@ -111,7 +113,15 @@ Use this title:
 
 `Add vendor: Your Shop Name`
 
-Then fill in the PR template and submit it.
+GitHub will show you a form with a few questions about your shop.
+
+Fill in the basic details you know:
+- your shop name
+- your website
+- your region
+- where people can find you in the community
+
+Then click **Create pull request**.
 
 ### 5. What happens next
 
@@ -120,16 +130,6 @@ Then fill in the PR template and submit it.
 3. The core team decides whether to merge your listing
 
 If your PR is closed, you can fix the issues and open a new one.
-
----
-
-## 🔍 What happens next
-
-1. **CI validates your files** — checks JSON schema, logo size, slug match. Fix anything it flags before the review starts.
-2. **Community weighs in** — anyone in the Bitaxe/OSMU community can comment, ask questions, or vouch for you. This is the point. The review is public.
-3. **Core team decides** — Skot, Wantclue, Derek or another core contributor merges or closes the PR, usually with a short explanation.
-
-If your PR gets closed, fix the issues raised and re-apply.
 
 ---
 

@@ -13,7 +13,7 @@
 | **Shop name** | |
 | **Website** | |
 | **Region** | |
-| **Where to find you in the community** | <!-- Discord handle, X profile, forum posts — anything that helps people verify you --> |
+| **Where to find you in the community** | |
 
 ---
 
@@ -21,23 +21,14 @@
 
 _Fill this in yourself. The community will verify during review._
 
-- [ ] I sell **genuine Bitaxe hardware** — not clones or third-party boards sold as Bitaxe
-- [ ] My shop is **live and active** — real products, real stock, orders actually going out
-- [ ] I'm **reachable in the community** — Discord, X, or somewhere people can find and vouch for me
-- [ ] There are **no open reports** of fraud or counterfeits against my shop that I know of
-- [ ] I understand listings can be **removed** if I stop selling genuine hardware or confirmed issues arise
-
----
-
-## Files checklist
-
-_Double-check before submitting:_
-
-- [ ] JSON is at `vendors/{slug}.json` and the `slug` field matches the filename exactly
-- [ ] Logo is at `logos/{slug}.{ext}` (png, jpg, or webp), square 400×400px recommended, max 200 KB
+- [ ] I sell genuine Bitaxe hardware
+- [ ] My shop is live and active
+- [ ] I am reachable in the community
+- [ ] I am not aware of open fraud or counterfeit reports about my shop
+- [ ] I understand listings can be removed if confirmed issues arise
 
 ---
 
 ## Anything else the community should know?
 
-<!-- Recent activity in OSMU Discord, who can vouch for you, links to community posts, how long you've been selling. More context = faster review. -->
+<!-- Optional -->
