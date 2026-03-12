@@ -52,21 +52,26 @@ jobs:
 
             # 3. Logo file must exist
             logo=$(jq -r '.logo' "$f")
+            FILE_ERRORS=0
             if [ ! -f "$logo" ]; then
               echo "::error file=$f::Logo file not found: $logo"
               ERRORS=$((ERRORS + 1))
+              FILE_ERRORS=$((FILE_ERRORS + 1))
             else
               # 4. Logo must be ≤ 200 KB
               size=$(stat -c%s "$logo" 2>/dev/null || stat -f%z "$logo")
               if [ "$size" -gt 204800 ]; then
                 echo "::error file=$f::Logo exceeds 200 KB (${size} bytes): $logo"
                 ERRORS=$((ERRORS + 1))
+                FILE_ERRORS=$((FILE_ERRORS + 1))
               else
                 echo "✓ Logo OK (${size} bytes)"
               fi
             fi
 
-            echo "✓ $f is valid"
+            if [ "$FILE_ERRORS" -eq 0 ]; then
+              echo "✓ $f is valid"
+            fi
           done
 
           if [ "$ERRORS" -gt 0 ]; then
