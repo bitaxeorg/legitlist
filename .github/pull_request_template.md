@@ -15,10 +15,10 @@ _Replace the example values below with your real details._
 
 | | |
 |---|---|
-| **Shop name** | Pivotal Mining |
-| **Website** | https://pivotalmining.com |
-| **Region** | North America |
-| **Where to find you in the community** | https://x.com/pivotalmining |
+| **Shop name** | Your shop name |
+| **Website** | https://yourshop.com |
+| **Region** | Your region |
+| **Where to find you in the community** | Your X, Discord, Instagram, or other public link |
 
 ---
 

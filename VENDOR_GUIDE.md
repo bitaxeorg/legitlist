@@ -21,6 +21,24 @@ New to the community? That's fine — but expect the review to take longer while
 
 ---
 
+## 🧰 What you need before you start
+
+Before you begin, make sure you have:
+
+- your shop name
+- your website URL
+- your region and country
+- your logo file
+- at least one place where the community can find you (for example X, Discord, or Instagram)
+
+For your logo:
+- use a square image
+- **400×400 px recommended**
+- max **200 KB**
+- `.png`, `.jpg`, or `.webp`
+
+---
+
 ## 📋 How to submit
 
 You can do all of this directly in your browser on GitHub. No coding tools needed.
@@ -51,7 +69,7 @@ Example:
 
 `pivotal-mining.json`
 
-Choose one short name for your shop, like `pivotal-mining`. Use that same name for your JSON file, the `slug` field, and your logo file.
+Choose one short name for your shop, like `pivotal-mining`. Use that same name for your shop file, the `slug` field, and your logo file.
 
 Paste this example, then replace the sample details with your own shop details:
 
