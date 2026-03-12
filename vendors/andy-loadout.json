@@ -1,15 +1,15 @@
 {
-  "name": "Example Vendor",
-  "slug": "example-vendor",
-  "website": "https://example-vendor.com",
-  "region": "North America",
-  "country": "USA",
+  "name": "Andy",
+  "slug": "andy-loadout",
+  "website": "loadout.gg",
+  "region": "Europe",
+  "country": "Italy",
   "logo": "logos/example-vendor.png",
-  "description": "Official Bitaxe reseller for the USA \u2014 ships within 2 business days.",
+  "description": "Official Bitaxe reseller for the ITA Loadout \u2014 ships within 2 business days.",
   "active": true,
   "social": {
-    "x": "https://x.com/examplevendor",
-    "instagram": "https://instagram.com/examplevendor",
+    "x": "https://x.com/aerdna_c",
+    "instagram": "https://instagram.com/andrea.work",
     "youtube": ""
   }
 }
