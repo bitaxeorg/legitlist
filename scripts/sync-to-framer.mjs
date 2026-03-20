@@ -15,6 +15,7 @@
 import { connect } from "framer-api"
 import fs from "node:fs"
 import path from "node:path"
+import { spawnSync } from "node:child_process"
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
@@ -120,6 +121,16 @@ function vendorToItem(v) {
   }
 }
 
+function runValidationPreflight() {
+  console.log("🧪 Running validation preflight…")
+  const validatorPath = path.resolve("./scripts/validate-all.mjs")
+  const result = spawnSync(process.execPath, [validatorPath], { stdio: "inherit" })
+
+  if (result.status !== 0) {
+    throw new Error("Preflight validation failed. Fix vendor data before syncing.")
+  }
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -130,8 +141,11 @@ async function main() {
     process.exit(1)
   }
 
+  runValidationPreflight()
+
   console.log("🔌 Connecting to Framer…")
   const framer = await connect(FRAMER_PROJECT_URL, FRAMER_API_KEY)
+  let mainError = null
 
   try {
     console.log(`🖼️  Logo asset ref: ${ASSET_REF}`)
@@ -198,9 +212,20 @@ async function main() {
     await withRetry("Deploy", () => framer.deploy(deployment.id))
 
     console.log("🎉 Sync complete!")
+  } catch (err) {
+    mainError = err
+    throw err
   } finally {
     // Always disconnect — without this the script hangs indefinitely
-    await framer.disconnect()
+    try {
+      await framer.disconnect()
+    } catch (disconnectError) {
+      if (mainError) {
+        console.error("⚠️  Disconnect failed after an earlier sync error:", disconnectError?.message || disconnectError)
+      } else {
+        throw disconnectError
+      }
+    }
   }
 }
 
