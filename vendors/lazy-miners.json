@@ -1,0 +1,16 @@
+{
+  "name": "Lazy Miners",
+  "slug": "lazy-miners",
+  "website": "https://lazyminers.com",
+  "region": "North America",
+  "country": "Canada",
+  "logo": "lazy-miners.png",
+  "description": "Canada-based ASIC broker buying, selling, and sourcing new and used miners. We ship worldwide with a focus on North America and have been helping miners find the right hardware since August 2025",
+  "active": true,
+  "social": {
+    "x": "https://x.com/LazyMiners1",
+    "instagram": "https://www.instagram.com/lazyminers1/",
+    "youtube": "https://www.youtube.com/@lazyminers",
+    "tiktok": "https://www.tiktok.com/@lazy.miners"
+  }
+}
