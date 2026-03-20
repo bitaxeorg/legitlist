@@ -41,7 +41,14 @@ for (const file of allVendorEntries) {
 
 for (const file of files) {
   const filePath = path.join(vendorsDir, file)
-  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+  let data
+  try {
+    data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+  } catch (err) {
+    console.error(`❌ ${file} — Invalid JSON: ${err.message}`)
+    errors++
+    continue
+  }
 
   const valid = validate(data)
   if (!valid) {

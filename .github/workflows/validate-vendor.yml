@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate schema, slug & logo
+    name: Validate schema, slug, and logos
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,102 +23,10 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 22
+          cache: npm
 
-      - name: Install validators
-        run: npm install -g ajv-cli@5.0.0 ajv-formats@3.0.1
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Validate vendors directory filenames
-        run: |
-          ERRORS=0
-
-          for f in vendors/*; do
-            [ -f "$f" ] || continue
-            base=$(basename "$f")
-            [[ "$base" == _* ]] && continue
-
-            if [[ "$base" != *.json ]]; then
-              echo "::error file=$f::Invalid vendor filename. Vendor files must end with .json"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-
-            if [[ ! "$base" =~ ^[a-z0-9]+(-[a-z0-9]+)*\.json$ ]]; then
-              echo "::error file=$f::Invalid vendor filename. Use lowercase letters, numbers, and single hyphens only"
-              ERRORS=$((ERRORS + 1))
-            fi
-          done
-
-          if [ "$ERRORS" -gt 0 ]; then
-            echo "::error::$ERRORS invalid vendor filename(s) found."
-            exit 1
-          fi
-
-      - name: Validate each vendor JSON
-        run: |
-          ERRORS=0
-
-          for f in vendors/*.json; do
-            # Skip internal files (_schema.json, _example.json, etc.)
-            [[ "$(basename "$f")" == _* ]] && continue
-
-            echo ""
-            echo "━━━ Checking: $f ━━━"
-
-            # 1. JSON schema validation
-            if ! ajv validate -s vendors/_schema.json -d "$f" -c ajv-formats --strict=false; then
-              echo "::error file=$f::Schema validation failed"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-
-            # 2. Slug must match filename
-            FILE_ERRORS=0
-            slug=$(jq -r '.slug' "$f")
-            expected=$(basename "$f" .json)
-            if [ "$slug" != "$expected" ]; then
-              echo "::error file=$f::Slug '$slug' does not match filename — rename the file to '$slug.json' or change the slug to '$expected'"
-              ERRORS=$((ERRORS + 1))
-              FILE_ERRORS=$((FILE_ERRORS + 1))
-            fi
-
-            # 3. Logo filename must match slug
-            logo=$(jq -r '.logo' "$f")
-            logo_filename="$logo"
-            logo_stem="${logo_filename%.*}"
-            if [ "$logo_stem" != "$slug" ]; then
-              echo "::error file=$f::Logo filename '$logo_stem' does not match slug '$slug'"
-              ERRORS=$((ERRORS + 1))
-              FILE_ERRORS=$((FILE_ERRORS + 1))
-            fi
-
-            # 4. Logo file must exist
-            logo_path="logos/$logo"
-            if [ ! -f "$logo_path" ]; then
-              echo "::error file=$f::Logo not found: $logo_path"
-              ERRORS=$((ERRORS + 1))
-              FILE_ERRORS=$((FILE_ERRORS + 1))
-            else
-              # 5. Logo must be ≤ 200 KB
-              size=$(stat -c%s "$logo_path" 2>/dev/null || stat -f%z "$logo_path")
-              if [ "$size" -gt 204800 ]; then
-                echo "::error file=$f::Logo exceeds 200 KB (${size} bytes) — please compress it"
-                ERRORS=$((ERRORS + 1))
-                FILE_ERRORS=$((FILE_ERRORS + 1))
-              else
-                echo "✓ Logo OK (${size} bytes)"
-              fi
-            fi
-
-            if [ "$FILE_ERRORS" -eq 0 ]; then
-              echo "✓ $f is valid"
-            fi
-          done
-
-          if [ "$ERRORS" -gt 0 ]; then
-            echo ""
-            echo "::error::$ERRORS validation error(s) found. Please fix them before merging."
-            exit 1
-          fi
-
-          echo ""
-          echo "✅ All vendor files are valid!"
+      - name: Run repository validator
+        run: npm run validate
