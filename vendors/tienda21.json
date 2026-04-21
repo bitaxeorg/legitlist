@@ -1,0 +1,16 @@
+{
+  "name": "Tienda 21",
+  "slug": "tienda21",
+  "website": "https://tienda21.com",
+  "region": "South America",
+  "country": "Argentina",
+  "description": "Bitcoin-native shop selling genuine Bitaxe hardware in Argentina and LatAm. Lightning (NWC) payments, Spanish + English, fast shipping from Buenos Aires.",
+  "active": true,
+  "social": {
+    "x": "",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
