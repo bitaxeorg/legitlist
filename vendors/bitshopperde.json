@@ -1,0 +1,13 @@
+{
+  "name": "bitshopper.de",
+  "slug": "bitshopperde",
+  "website": "https://www.bitshopper.de/",
+  "region": "Europe",
+  "country": "Germany",
+  "description": "bitshopper.de - Home and Education Miners since 2014. Bitaxe Manufacturer since 2023.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/bitshopper_de",
+    "youtube": "https://www.youtube.com/@bitshopperde"
+  }
+}
