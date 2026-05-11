@@ -1,0 +1,16 @@
+{
+  "name": "Bitronics",
+  "slug": "bitronics",
+  "website": "https://bitronics.store",
+  "region": "Europe",
+  "country": "Spain",
+  "description": "Bringing your Bitcoin mining experience with DIY products, made with passion in Barcelona. Discover genuine Bitaxe products at bitronics.store.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/BitronicsStore",
+    "instagram": "",
+    "youtube": "https://youtube.com/@bitmaker_",
+    "tiktok": "https://www.tiktok.com/@bitmaker_",
+    "nostr": ""
+  }
+}
