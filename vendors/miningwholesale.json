@@ -1,1 +1,16 @@
-
+{
+  "name": "Mining Wholesale",
+  "slug": "miningwholesale",
+  "website": "https://miningwholesale.eu/",
+  "region": "Europe",
+  "country": "Netherland",
+  "description": "Bitcoin-only wholesale supplier of Bitcoin mining hardware (ASIC miners) and parts, focused on professional miners, hosting providers and resellers. Private customers are also welcome for smaller orders.",
+  "active": true,
+  "social": {
+    "x": "https://twitter.com/Bas_Elbers",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
