@@ -1,0 +1,16 @@
+{
+  "name": "Plebstyle",
+  "slug": "plebstyle",
+  "website": "https://pleb.style",
+  "region": "Europe",
+  "country": "Germany",
+  "description": "SOVEREIGN. SECURE. STYLISH. 100% Plebstyle. 0% Fiat Mindset.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/Pleb_Style",
+    "instagram": "https://www.instagram.com/plebstyle/",
+    "youtube": "https://www.youtube.com/@Pleb_Style",
+    "tiktok": "",
+    "nostr": "https://snort.social/p/npub1n8jnpz9gfzuc23w8h4tud4y3qshl5cz9ma8fdhmf0syyzgdth0aqhswl3h"
+  }
+}
