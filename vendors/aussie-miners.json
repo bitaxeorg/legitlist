@@ -1,0 +1,16 @@
+{
+  "name": "Aussie Miners",
+  "slug": "aussie-miners",
+  "website": "https://aussieminers.com",
+  "region": "Asia Pacific",
+  "country": "Australia",
+  "description": "Aussie Miners is Australia’s largest retailer of Bitaxe and Nerdaxe miners. Based in Brisbane, we sell primarily to Australia, plus Asia. Premium hardware and top-tier service made us the #1 solo home mining store in just over a year.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/aussie_miners",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
