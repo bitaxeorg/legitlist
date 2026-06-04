@@ -64,7 +64,7 @@ This creates the Managed Collection in Framer with all fields. Only needs to be 
 1. Create `vendors/{slug}.json` — copy from `vendors/_example.json` (`slug` uses lowercase letters, numbers, and hyphens only; no `logo` field in JSON)
 2. Add logo at `logos/{slug}.{ext}` (square 400×400px recommended, max 200 KB — png, jpg, webp)
 3. Social keys supported by schema: `x`, `instagram`, `youtube`, `tiktok`, `nostr`
-4. Open a PR — CI validates automatically
+4. Open a PR — CI validates automatically. Vendor listing PR titles must start with `Add vendor:`, `Update vendor:`, `Remove vendor:`, or `Deactivate vendor:`
 5. Merge → sync and deploy run automatically
 
 ---
@@ -102,6 +102,7 @@ Both trigger the sync on merge. Both are transparent — the change is visible i
 
 ```bash
 npm install
-npm run validate   # validate all vendor files locally
-npm run sync       # manual sync (requires FRAMER_PROJECT_URL and FRAMER_API_KEY exported in your shell)
+npm run validate      # validate all vendor files locally
+npm run validate:pr   # validates PR title/body in GitHub Actions; skips locally without GITHUB_EVENT_PATH
+npm run sync          # manual sync (requires FRAMER_PROJECT_URL and FRAMER_API_KEY exported in your shell)
 ```

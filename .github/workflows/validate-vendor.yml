@@ -2,14 +2,18 @@ name: ✅ Validate Vendor PR
 
 on:
   pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
     paths:
       - "vendors/**"
-      - "vendors/_schema.json"
       - "logos/**"
-      - "scripts/validate-all.mjs"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/validate-vendor.yml"
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   validate:
@@ -30,3 +34,8 @@ jobs:
 
       - name: Run repository validator
         run: npm run validate
+
+      - name: Run PR metadata validator
+        run: npm run validate:pr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

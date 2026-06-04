@@ -157,6 +157,8 @@ Use this title:
 
 `Add vendor: Your Shop Name`
 
+For later changes, use `Update vendor: Your Shop Name`. For removals or deactivations, use `Remove vendor: Your Shop Name` or `Deactivate vendor: Your Shop Name`.
+
 GitHub will show you a short form with pre-filled example fields.
 
 Complete these sections:
@@ -223,6 +225,8 @@ A listing can be removed if:
 - Your shop goes dark for an extended period
 
 Removals go through the same PR process — transparent, on the record, visible to everyone.
+
+Use the PR title `Remove vendor: Vendor Name` for hard removals or `Deactivate vendor: Vendor Name` for soft removals.
 
 ---
 
