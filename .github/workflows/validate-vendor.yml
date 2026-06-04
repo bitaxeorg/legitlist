@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   validate:
@@ -36,3 +37,5 @@ jobs:
 
       - name: Run PR metadata validator
         run: npm run validate:pr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

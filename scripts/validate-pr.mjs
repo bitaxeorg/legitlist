@@ -33,6 +33,13 @@ const body = pr.body || ""
 const errors = []
 const titleMatch = title.match(/^(Add vendor|Update vendor|Remove vendor|Deactivate vendor): .+/)
 const prType = titleMatch?.[1]
+const changedFiles = await getChangedFiles()
+const touchesVendorListing = changedFiles?.some((file) => file.startsWith("vendors/") || file.startsWith("logos/"))
+
+if (changedFiles && !touchesVendorListing && !titleMatch) {
+  console.log("Skipping PR metadata validation: PR does not touch vendor listings")
+  process.exit(0)
+}
 
 if (!titleMatch) {
   errors.push("PR title must start with one of: 'Add vendor:', 'Update vendor:', 'Remove vendor:', or 'Deactivate vendor:'")
@@ -91,3 +98,31 @@ if (errors.length > 0) {
 }
 
 console.log("PR metadata is valid")
+
+async function getChangedFiles() {
+  const filesUrl = pr._links?.self?.href ? `${pr._links.self.href}/files` : null
+  const token = process.env.GITHUB_TOKEN
+
+  if (!filesUrl || !token) return null
+
+  try {
+    const response = await fetch(filesUrl, {
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${token}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    })
+
+    if (!response.ok) {
+      console.warn(`Could not fetch PR files (${response.status}); validating title/body only`)
+      return null
+    }
+
+    const files = await response.json()
+    return files.map((file) => file.filename)
+  } catch (err) {
+    console.warn(`Could not fetch PR files; validating title/body only: ${err.message}`)
+    return null
+  }
+}
