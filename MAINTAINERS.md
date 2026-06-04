@@ -102,6 +102,7 @@ Both trigger the sync on merge. Both are transparent — the change is visible i
 
 ```bash
 npm install
-npm run validate   # validate all vendor files locally
-npm run sync       # manual sync (requires FRAMER_PROJECT_URL and FRAMER_API_KEY exported in your shell)
+npm run validate      # validate all vendor files locally
+npm run validate:pr   # validates PR title/body in GitHub Actions; skips locally without GITHUB_EVENT_PATH
+npm run sync          # manual sync (requires FRAMER_PROJECT_URL and FRAMER_API_KEY exported in your shell)
 ```

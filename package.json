@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "sync": "node scripts/sync-to-framer.mjs",
-    "validate": "node scripts/validate-all.mjs"
+    "validate": "node scripts/validate-all.mjs",
+    "validate:pr": "node scripts/validate-pr.mjs"
   },
   "dependencies": {
     "framer-api": "0.1.1"
