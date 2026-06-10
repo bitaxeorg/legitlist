@@ -1,0 +1,16 @@
+{
+  "name": "yourdevice",
+  "slug": "yourdevice",
+  "website": "https://yourdevice.ch",
+  "region": "Europe",
+  "country": "Switzerland",
+  "description": "We stand for opensource in every possible way, hardware, software and bitcoin.",
+  "active": true,
+  "social": {
+    "x": "",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": "https://primal.net/p/nprofile1qqsrat29ttgjg7kykqcyw4lyhmyue0nwjrgtfptjcgxklqp0q8tfnqqqf5p0f"
+  }
+}
