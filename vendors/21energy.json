@@ -1,0 +1,16 @@
+{
+  "name": "21energy",
+  "slug": "21energy",
+  "website": "https://21energy.com",
+  "region": "Europe",
+  "country": "Austria",
+  "description": "Warmth that pays off. 21energy makes Bitcoin heaters and mining equipment in Austria. Heat your home and earn cashback from mining. Ships across Europe.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/21energy_com",
+    "instagram": "https://instagram.com/21energy_com",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
