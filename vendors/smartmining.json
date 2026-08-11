@@ -1,0 +1,16 @@
+{
+  "name": "SmartMining",
+  "slug": "smartmining",
+  "website": "https://smartmining.com",
+  "region": "Europe",
+  "country": "Italy",
+  "description": "Smart Mining manufactures and distributes home Bitcoin miners. Built in Italy, shipped across Europe. Silent, low-power, open-source hardware that puts you in every block draw.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/smartminingcom",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
