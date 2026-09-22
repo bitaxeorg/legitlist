@@ -1,0 +1,16 @@
+{
+  "name": "BitcoinStuffStore",
+  "slug": "bitcoinstuffstore",
+  "website": "https://www.bitcoinstuffstore.com",
+  "region": "Europe",
+  "country": "Netherlands",
+  "description": "Dutch Bitcoin-only shop selling genuine Bitaxe Gamma, Supra and more solo miners, plus hardware wallets. Ships from the Netherlands across the EU, with setup guides and support in Dutch, English and German.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/ZijlstraMario",
+    "instagram": "",
+    "youtube": "https://www.youtube.com/channel/UCz0la3ERI-8v2isZWVZ_Xww",
+    "tiktok": "",
+    "nostr": "https://njump.me/npub135q6dvnjah9023xszmjs2wvd4gqhn2trku52wt2lv8cl4hc8ltjsk0w4sq"
+  }
+}
