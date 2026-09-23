@@ -1,0 +1,16 @@
+{
+  "name": "The Bitcoin Hardware Store",
+  "slug": "tbhs",
+  "website": "https://tbhs.sv",
+  "region": "North America",
+  "country": "El Salvador",
+  "description": "Do you have any questions about Bitcoin? Learn about Bitcoin. Ask questions. Get the right hardware. Visit our retail stores in El Salvador.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/tbhs_sv",
+    "instagram": "https://instagram.com/tbhs_sv",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
