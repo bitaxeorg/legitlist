@@ -1,0 +1,16 @@
+{
+  "name": "Polarblocks",
+  "slug": "polarblocks",
+  "website": "https://polarblocklabs.com",
+  "region": "Europe",
+  "country": "Germany",
+  "description": "Polarblock Labs builds quiet 15-watt desktop miners in Bavaria for independent participation in the Bitcoin network. Every Bitaxe we sell is assembled and tested in Germany before it ships.",
+  "active": true,
+  "social": {
+    "x": "",
+    "instagram": "https://www.instagram.com/polar_blocks/",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
